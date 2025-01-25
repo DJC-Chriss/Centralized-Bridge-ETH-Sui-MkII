@@ -1,0 +1,16 @@
+[package]
+name = "bridge_token"
+version = "0.1.0"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", rev = "devnet" }
+
+[addresses]
+# Define named addresses used in your project
+bridge = "0x0"  # Replace with actual bridge address during deployment
+std = "0x1"     # Standard library address
+Sui = "0x2"     # Sui standard library
+
+[dev-addresses]
+# Define temporary addresses for local development or tests
+bridge = "0x0"

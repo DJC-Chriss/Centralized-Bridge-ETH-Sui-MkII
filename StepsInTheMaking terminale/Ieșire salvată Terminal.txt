@@ -1,0 +1,307 @@
+Last login: Fri Jan 24 16:03:39 on ttys000
+cris@MacBook-Pro-Cristian ethereum % forge build
+[⠊] Compiling...
+[⠒] Unable to resolve imports:
+      "../src/BridgeToken.sol" in "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/script/MintToken.s.sol"
+      "../src/BridgeToken.sol" in "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/script/BurnToken.s.sol"
+      "../src/BridgeToken.sol" in "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/script/DeployToken.s.sol"
+with remappings:
+      @openzeppelin/contracts/=/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/lib/openzeppelin-contracts/contracts/
+      erc4626-tests/=/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/lib/openzeppelin-contracts/lib/erc4626-tests/
+      forge-std/=/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/lib/forge-std/src/
+      halmos-cheatcodes/=/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/
+      openzeppelin-contracts/=/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/lib/openzeppelin-contracts/
+[⠆] Compiling 36 files with Solc 0.8.28
+[⠰] Solc 0.8.28 finished in 134.43ms
+Error: Compiler run failed:
+Error (6275): Source "src/BridgeToken.sol" not found: File not found. Searched the following locations: "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum".
+ParserError: Source "src/BridgeToken.sol" not found: File not found. Searched the following locations: "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum".
+ --> script/BurnToken.s.sol:5:1:
+  |
+5 | import {Token} from "../src/BridgeToken.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error (6275): Source "src/BridgeToken.sol" not found: File not found. Searched the following locations: "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum".
+ParserError: Source "src/BridgeToken.sol" not found: File not found. Searched the following locations: "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum".
+ --> script/DeployToken.s.sol:3:1:
+  |
+3 | import {Token} from "../src/BridgeToken.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Error (6275): Source "src/BridgeToken.sol" not found: File not found. Searched the following locations: "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum".
+ParserError: Source "src/BridgeToken.sol" not found: File not found. Searched the following locations: "/Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum".
+ --> script/MintToken.s.sol:5:1:
+  |
+5 | import {Token} from "../src/BridgeToken.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+cris@MacBook-Pro-Cristian ethereum % forge build
+[⠊] Compiling...
+[⠒] Compiling 36 files with Solc 0.8.28
+[⠑] Solc 0.8.28 finished in 595.31ms
+Compiler run successful with warnings:
+Warning (2072): Unused local variable.
+ --> script/DeployToken.s.sol:8:9:
+  |
+8 |         Token token = new Token();
+  |         ^^^^^^^^^^^
+
+cris@MacBook-Pro-Cristian ethereum % forge script script/DeployToken.s.sol --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+[⠊] Compiling...
+No files changed, compilation skipped
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 843264
+
+Estimated amount required: 0.001686528000843264 ETH
+
+==========================
+
+##### anvil-hardhat
+✅  [Success] Hash: 0xedca35d38fff0bc8ea2318b8f2407e7be5f3b9836b657b7e5f63858a60d4f7c3
+Contract Address: 0x5FbDB2315678afecb367f032d93F642f64180aa3
+Block: 1
+Paid: 0.000648665000648665 ETH (648665 gas * 1.000000001 gwei)
+
+✅ Sequence #1 on anvil-hardhat | Total Paid: 0.000648665000648665 ETH (648665 gas * avg 1.000000001 gwei)
+                                                                                
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/broadcast/DeployToken.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/cache/DeployToken.s.sol/31337/run-latest.json
+
+cris@MacBook-Pro-Cristian ethereum % forge script script/DeployToken.s.sol --rpc-url 127.0.0.1:8545 --private-key a671d08bfed316939f9a682a52649f5f781b0e87ba2128f4c10e2dff4a5bea6d --broadcast
+[⠊] Compiling...
+No files changed, compilation skipped
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 843264
+
+Estimated amount required: 0.001686528000843264 ETH
+
+==========================
+
+Transactions saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/broadcast/DeployToken.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/cache/DeployToken.s.sol/31337/run-latest.json
+
+Error: Failed to send transaction
+
+Context:
+- server returned an error response: error code -32003: Insufficient funds for gas * price + value
+cris@MacBook-Pro-Cristian ethereum % forge script script/DeployToken.s.sol --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+[⠊] Compiling...
+No files changed, compilation skipped
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 2.000000001 gwei
+
+Estimated total gas used for script: 843264
+
+Estimated amount required: 0.001686528000843264 ETH
+
+==========================
+
+##### anvil-hardhat
+✅  [Success] Hash: 0x110cf65d82801c2bc68d2c096f2fd8a7997be8a65587644bbfb4b98bc6a13b4a
+Contract Address: 0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512
+Block: 2
+Paid: 0.000571088261550095 ETH (648665 gas * 0.880405543 gwei)
+
+✅ Sequence #1 on anvil-hardhat | Total Paid: 0.000571088261550095 ETH (648665 gas * avg 0.880405543 gwei)
+                                                                                                             
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/broadcast/DeployToken.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/cache/DeployToken.s.sol/31337/run-latest.json
+
+cris@MacBook-Pro-Cristian ethereum % forge script script/MintToken.s.sol --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+[⠊] Compiling...
+[⠑] Compiling 1 files with Solc 0.8.28
+[⠘] Solc 0.8.28 finished in 612.23ms
+Compiler run successful!
+Traces:
+  [122669] → new MintToken@0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519
+    └─ ← [Return] 502 bytes of code
+
+  [3248] MintToken::run()
+    ├─ [0] VM::startBroadcast()
+    │   └─ ← [Return] 
+    └─ ← [Revert] EvmError: Revert
+
+
+Error: script failed: <empty revert data>
+cris@MacBook-Pro-Cristian ethereum % forge script script/MintToken.s.sol --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+[⠊] Compiling...
+[⠔] Compiling 1 files with Solc 0.8.28
+[⠒] Solc 0.8.28 finished in 411.10ms
+Compiler run successful!
+Traces:
+  [122669] → new MintToken@0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519
+    └─ ← [Return] 502 bytes of code
+
+  [5748] MintToken::run()
+    ├─ [0] VM::startBroadcast()
+    │   └─ ← [Return] 
+    └─ ← [Revert] EvmError: Revert
+
+
+Error: script failed: <empty revert data>
+cris@MacBook-Pro-Cristian ethereum % forge script script/DeployToken.s.sol --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+[⠊] Compiling...
+No files changed, compilation skipped
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 1.760811085 gwei
+
+Estimated total gas used for script: 843264
+
+Estimated amount required: 0.00148482859878144 ETH
+
+==========================
+
+##### anvil-hardhat
+✅  [Success] Hash: 0x79deba00e044a2db9d1fe2f828f638d814837d8aa8ecd5accc7ecbddce046a5d
+Contract Address: 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0
+Block: 3
+Paid: 0.0005027892709168 ETH (648665 gas * 0.77511392 gwei)
+
+✅ Sequence #1 on anvil-hardhat | Total Paid: 0.0005027892709168 ETH (648665 gas * avg 0.77511392 gwei)
+                                                                                                            
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/broadcast/DeployToken.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/cache/DeployToken.s.sol/31337/run-latest.json
+
+cris@MacBook-Pro-Cristian ethereum % forge script script/MintToken.s.sol --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+
+[⠊] Compiling...
+[⠒] Compiling 1 files with Solc 0.8.28
+[⠑] Solc 0.8.28 finished in 554.71ms
+Compiler run successful!
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 1.550227839 gwei
+
+Estimated total gas used for script: 73833
+
+Estimated amount required: 0.000114457972036887 ETH
+
+==========================
+
+##### anvil-hardhat
+✅  [Success] Hash: 0x2e13dd95040080ee4548c5a9b0dec1af44db811c9d05f9dbea17dda0fdcc513b
+Block: 4
+Paid: 0.000036478471961905 ETH (53455 gas * 0.682414591 gwei)
+
+✅ Sequence #1 on anvil-hardhat | Total Paid: 0.000036478471961905 ETH (53455 gas * avg 0.682414591 gwei)
+                                                                                                            
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/broadcast/MintToken.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/cache/MintToken.s.sol/31337/run-latest.json
+
+cris@MacBook-Pro-Cristian ethereum % forge script script/BurnToken.s.sol --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+[⠊] Compiling...
+[⠔] Compiling 1 files with Solc 0.8.28
+[⠒] Solc 0.8.28 finished in 409.68ms
+Compiler run successful!
+Traces:
+  [120669] → new BurnToken@0x5b73C5498c1E3b4dbA84de0F1833c4a029d90519
+    └─ ← [Return] 492 bytes of code
+
+  [5721] BurnToken::run()
+    ├─ [0] VM::startBroadcast()
+    │   └─ ← [Return] 
+    └─ ← [Revert] EvmError: Revert
+
+
+Error: script failed: <empty revert data>
+cris@MacBook-Pro-Cristian ethereum % forge script script/BurnToken.s.sol --rpc-url 127.0.0.1:8545 --private-key 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80 --broadcast
+[⠊] Compiling...
+[⠔] Compiling 1 files with Solc 0.8.28
+[⠒] Solc 0.8.28 finished in 429.48ms
+Compiler run successful!
+Script ran successfully.
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 31337
+
+Estimated gas price: 1.364829181 gwei
+
+Estimated total gas used for script: 49644
+
+Estimated amount required: 0.000067755579861564 ETH
+
+==========================
+
+##### anvil-hardhat
+✅  [Success] Hash: 0x88da7a39644ae400dd32bc7a4acae9591e22f37219f0e95697fff188630f77c8
+Block: 5
+Paid: 0.00002147235300821 ETH (35942 gas * 0.597416755 gwei)
+
+✅ Sequence #1 on anvil-hardhat | Total Paid: 0.00002147235300821 ETH (35942 gas * avg 0.597416755 gwei)
+                                                                                                            
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+
+Transactions saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/broadcast/BurnToken.s.sol/31337/run-latest.json
+
+Sensitive values saved to: /Users/cris/PROGRAMARE/FACULTATE/AN_3/crypto/projectv3/ethereum/cache/BurnToken.s.sol/31337/run-latest.json
+
+cris@MacBook-Pro-Cristian ethereum % 
