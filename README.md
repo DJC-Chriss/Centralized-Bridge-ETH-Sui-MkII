@@ -124,10 +124,12 @@ Comprehensive walkthrough of the steps taken to set up and manage a token bridge
      ```
 
 2. **Account Setup**:
-   - Imported an existing account:
+   - Imported an existing account using this tutorial https://forums.sui.io/t/import-existed-account-to-sui-cli/44740/2:
      ```bash
-     sui keytool import --keypair-path <path_to_keypair_json>
+     sui keytool convert <wallet-private-key>
      ```
+   - Add the base64WithFlag output to the `~/.sui/sui_config/sui.keystore`.
+   
    - Verified the address and gas objects:
      ```bash
      sui client addresses
