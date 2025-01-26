@@ -33,8 +33,7 @@ Comprehensive walkthrough of the steps taken to set up and manage a token bridge
   - Created a JSON file for the keypair in the format required by the Sui CLI.
     ```json
     {
-      "schema": "ED25519",
-      "privateKey": "your_private_key_in_base64_format"
+      "privateKey": "PRIVATE_KEY_IN_BASE64_FORMAT"
     }
     ```
   - Imported the account:
